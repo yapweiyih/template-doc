@@ -3,17 +3,18 @@ from dataclasses import dataclass
 
 @dataclass
 class MyClass:
-    """This is a custom class.
+    """
+    This is a custom class.
 
     Use it as you like.
 
-    .. math::
-        \text{MultiHead}(Q, K, V) = \text{Concat}(head_1,\dots,head_h)W^O
-
     .. code-block:: python
 
-        x = 1
-        y = 2
+        >>> x = 1
+        >>> y = 2
+        >>> y
+        2
+
 
     """
 
@@ -45,4 +46,4 @@ class MyClass:
         return self.a
 
     def _private(self, a: int = 1) -> None:
-        return a
+        pass

@@ -3,7 +3,7 @@
 # Auto-generated with sphinx-apidoc
 docs/**/api
 docs/**/_api
-docs/auto-notebooks
+docs/auto_notebooks
 
 # Ignore mermaid-cli artifacts (for docsphinx markdown mermaid)
 node_modules/

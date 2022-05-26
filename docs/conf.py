@@ -33,11 +33,11 @@ extensions = [
     "sphinx.ext.autosummary",
     "sphinx.ext.autodoc",
     "nbsphinx",
-    # "sphinx.ext.napoleon",
-    # "sphinx.ext.viewcode",
+    "sphinx.ext.napoleon",
+    "sphinx.ext.viewcode",
     # "sphinx.ext.intersphinx",
-    # "sphinx.ext.extlinks",
-    # "sphinx.ext.doctest",
+    "sphinx.ext.extlinks",
+    "sphinx.ext.doctest",
     # "myst_parser",
     # "sphinx_toggleprompt",
     # "sphinx_autodoc_typehints",
@@ -51,6 +51,41 @@ autodoc_default_options = {"show-inheritance": True}
 source_suffix = {
     ".rst": "restructuredtext",
     ".md": "markdown",
+}
+
+nbsphinx_kernel_name = "python3"
+# https://nbsphinx.readthedocs.io/en/0.8.8/usage.html#nbsphinx_execute_arguments
+nbsphinx_execute_arguments = [
+    "--InlineBackend.figure_formats={'svg', 'pdf'}",
+    "--InlineBackend.rc=figure.dpi=96",
+]
+
+# Customize the html files generated from notebooks:
+# - Add "download as .ipynb" link.
+# - Make ANSI yellow more visible on white background. Typically needed by rich colored outputs.
+nbsphinx_epilog = r"""
+{% set docname = env.doc2path(env.docname, base=None).rsplit('/', 1)[1] %}
+
+.. raw:: html
+
+    <style>
+        .ansi-yellow-fg { color: #b65908; }
+        .ansi-yellow-bg { color: #b65908; }
+    </style>
+
+    <div class="admonition note">
+    Download this page as <a href="{{ docname|e }}">{{ docname|e }}</a> (right-click, and save as).
+    </div>
+ """
+
+# nbsphinx_epilog = nbsphinx_prolog
+
+# URL-shortener for docstrings
+extlinks = {
+    "pdug": (
+        "https://pandas.pydata.org/pandas-docs/stable/user_guide/%s",
+        "Pandas User Guide %s",
+    )
 }
 
 

@@ -12,3 +12,5 @@ nbsphinx
 ipython
 ipykernel
 ipywidgets
+
+doc8

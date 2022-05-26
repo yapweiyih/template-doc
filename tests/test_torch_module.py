@@ -1,5 +1,3 @@
-from xml.dom import xmlbuilder
-from numpy import block
 import pytest
 import torch
 from torch import nn
@@ -60,8 +58,9 @@ def test_multihead_attention(num_heads):
     print(mask)
     print(f"{x.shape=}")
     print(f"{mask.shape=}")
-    # For a binary mask, a True value indicates that the corresponding position is not allowed to attend.
+    # For a binary mask, a True value indicates that the corresponding position is not
+    # allowed to attend.
 
-    attn_output, attn_output_weights = multi_head(x, x, x, attn_mask=mask, need_weights=False)
+    attn_output, attn_output_weights = multi_head(x, x, x, attn_mask=mask, need_weights=True)
     print(f"{attn_output.shape=}")
     print(f"{attn_output_weights.shape=}")
