@@ -7,13 +7,18 @@ class MyClass:
 
     Use it as you like.
 
+    .. math::
+        \text{MultiHead}(Q, K, V) = \text{Concat}(head_1,\dots,head_h)W^O
+
+    .. code-block:: python
+
+        x = 1
+        y = 2
+
     """
 
     a: int = 1
     b: str = "abc"
-
-
-
 
     def get_string(self) -> str:
         """Return a string
@@ -39,6 +44,5 @@ class MyClass:
         """
         return self.a
 
-
-    def _private(self, a:int = 1)->None:
+    def _private(self, a: int = 1) -> None:
         return a

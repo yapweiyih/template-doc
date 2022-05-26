@@ -8,7 +8,7 @@ myst-parser
 myst-parser[linkify]
 
 # Below are dependencies to support notebook-sphinx integration
-# nbsphinx
-# ipython
-# ipykernel
-# ipywidgets
+nbsphinx
+ipython
+ipykernel
+ipywidgets

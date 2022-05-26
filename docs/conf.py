@@ -12,14 +12,15 @@
 #
 import os
 import sys
+
 sys.path.insert(0, os.path.abspath("../src"))
 
 
 # -- Project information -----------------------------------------------------
 
-project = 'weiyih'
-copyright = '2022, Yap Wei Yih'
-author = 'Yap Wei Yih'
+project = "weiyih"
+copyright = "2022, Yap Wei Yih"
+author = "Yap Wei Yih"
 
 
 # -- General configuration ---------------------------------------------------
@@ -31,6 +32,7 @@ extensions = [
     "sphinx.ext.autosectionlabel",
     "sphinx.ext.autosummary",
     "sphinx.ext.autodoc",
+    "nbsphinx",
     # "sphinx.ext.napoleon",
     # "sphinx.ext.viewcode",
     # "sphinx.ext.intersphinx",
@@ -53,12 +55,12 @@ source_suffix = {
 
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+templates_path = ["_templates"]
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -66,12 +68,12 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'pydata_sphinx_theme'
+html_theme = "pydata_sphinx_theme"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+html_static_path = ["_static"]
 
 
 def autodoc_skip_member(app, what, name, obj, skip, options):
@@ -81,9 +83,6 @@ def autodoc_skip_member(app, what, name, obj, skip, options):
     inherited from pandas. This will drastically reduce the autosummary table, and also the
     lhs-navbar.
     """
-    print("************")
-    print(type(obj))
-    print(obj)
     if obj is None:
         return True
     if isinstance(obj, property):
