@@ -109,6 +109,32 @@ html_theme = "pydata_sphinx_theme"
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
+html_css_files = ["css/custom.css"]
+
+# pydata-theme: add icon links to show up to the right of your main navigation bar.
+html_theme_options = {
+    "github_url": "https://github.com/yapweiyih/template-doc",
+    "icon_links": [
+        {
+            "name": "Gmail",
+            "url": "https://www.gmail.com",
+            "icon": "_static/gmail.png",
+            "type": "local",
+        },
+    ],
+    "use_edit_page_button": True,
+}
+
+
+# pydata-theme: add an edit-this-page button
+# https://github.com/yapweiyih/template-doc.git
+html_context = {
+    "github_url": "https://github.com",
+    "github_user": "yapweiyih",
+    "github_repo": "template-doc",
+    "github_version": "main",
+    "doc_path": "docs",
+}
 
 
 def autodoc_skip_member(app, what, name, obj, skip, options):

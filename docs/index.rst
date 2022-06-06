@@ -18,6 +18,12 @@ This is an external `google link`_.
 URL shortener to external link, :pdug:`pandas DateOffset <timeseries.html#dateoffset-objects>` and
 :pdug:`pandas 10mins <10min.html>`
 
+Add icon
+
+.. image:: _static/gmail.png
+  :width: 100
+  :height: 50
+
 
 Contents
 ========
