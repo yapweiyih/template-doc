@@ -1,0 +1,24 @@
+﻿weiyih.MyClass
+==============
+
+.. currentmodule:: weiyih
+
+.. autoclass:: MyClass
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+
+   
+        ~MyClass.get_int
+        ~MyClass.get_string
+   
+   
+
+   
+   
+   

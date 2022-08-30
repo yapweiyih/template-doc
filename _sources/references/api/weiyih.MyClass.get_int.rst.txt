@@ -1,0 +1,6 @@
+weiyih.MyClass.get\_int
+=======================
+
+.. currentmodule:: weiyih
+
+.. automethod:: MyClass.get_int

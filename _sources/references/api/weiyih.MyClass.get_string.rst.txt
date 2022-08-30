@@ -1,0 +1,6 @@
+weiyih.MyClass.get\_string
+==========================
+
+.. currentmodule:: weiyih
+
+.. automethod:: MyClass.get_string
