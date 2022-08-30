@@ -13,12 +13,12 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - name: Install docs dependencies
-        run: |
-          pip install -r requirements-docs.txt
-          sudo apt-get update
-          sudo apt install --yes pandoc
-          npm install @mermaid-js/mermaid-cli
+#       - name: Install docs dependencies
+#         run: |
+#           pip install -r requirements-docs.txt
+#           sudo apt-get update
+#           sudo apt install --yes pandoc
+#           npm install @mermaid-js/mermaid-cli
       - name: Build docs
         env:
           SPHINX_MERMAID_NO_SANDBOX: 1
