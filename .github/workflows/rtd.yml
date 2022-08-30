@@ -10,11 +10,11 @@ permissions:
   checks: write
 
 jobs:
-  staging:
+  publish:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy to the staging site
-        uses: KengoTODA/readthedocs-action@main
-        with:
-          rtd-token: ${{ secrets.RTD_TOKEN }}
-          rtd-project: your-read-the-docs-project
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./docs
