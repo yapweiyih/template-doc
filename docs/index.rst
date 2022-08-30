@@ -9,8 +9,6 @@ Welcome to weiyih's documentation!
 Amazon Whatif is an SDK to help you make data-driven decisions that are critical for your businesses
 over a long period of time. A complex hypothetical question such as
 
-A linked to :doc:`notebook <auto_notebooks/sample>`. Weird
-
 This is an external `google link`_.
 
 .. _google link: https://www.google.com
@@ -20,7 +18,7 @@ URL shortener to external link, :pdug:`pandas DateOffset <timeseries.html#dateof
 
 Add icon
 
-.. image:: _static/gmail.png
+.. image:: _static/logo.png
   :width: 100
   :height: 50
 
